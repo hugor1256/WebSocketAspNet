@@ -18,7 +18,7 @@ app.Map("/", async context =>
 
         while (true)
         {
-            var data = Encoding.ASCII.GetBytes($".NET Rocks => {DateTime.Now}");
+            var data = Encoding.ASCII.GetBytes($"{DateTime.Today} => {DateTime.Now}");
 
             await webSocket.SendAsync(
                 data,
