@@ -16,19 +16,26 @@ app.Map("/", async context =>
     {
         using var webSocket = await context.WebSockets.AcceptWebSocketAsync();
 
-        while (true)
+        while (webSocket.State == WebSocketState.Open)
         {
             var data = Encoding.ASCII.GetBytes($"{DateTime.Today} => {DateTime.Now}");
 
-            await webSocket.SendAsync(
-                data,
-                WebSocketMessageType.Text,
-                true,
-                CancellationToken.None);
-            await Task.Delay(1000);
+            try
+            {
+                await webSocket.SendAsync(
+                    data,
+                    WebSocketMessageType.Text,
+                    true,
+                    CancellationToken.None);
+                
+                await Task.Delay(1000);
+            }
+            catch (WebSocketException ex)
+            {
+                break;
+            }
         }
     }
-    
 });
 
 await app.RunAsync();
