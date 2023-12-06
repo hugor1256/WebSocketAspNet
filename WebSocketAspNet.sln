@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSocketSignalR", "WebSocketSignalR\WebSocketSignalR.csproj", "{336EFFD0-CE38-49BC-B7F4-B08E856E4739}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSocketAspNet", "WebSocketAspNet\WebSocketAspNet.csproj", "{336EFFD0-CE38-49BC-B7F4-B08E856E4739}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CliendSideWebSocket", "CliendSideWebSocket\CliendSideWebSocket.csproj", "{A9BD5851-D7C8-4AAA-ABD7-9851EAAB02DF}"
 EndProject
